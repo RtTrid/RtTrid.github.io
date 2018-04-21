@@ -571,7 +571,7 @@ body {
 
     .drop-menu:after {
         content: "";
-        left: 16%;
+        left: 14%;
         top: -8px;
         height: 0;
         width: 0;
