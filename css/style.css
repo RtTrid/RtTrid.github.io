@@ -139,6 +139,8 @@ body {
 .plan_information {
     padding: 16px;
     min-height: 112px;
+    display: flex;
+    flex-direction: column;
 }
 
 .plan_information:hover + .plan_button--basic {
@@ -308,7 +310,7 @@ body {
 }
 
 .form_email, .form_send-btn {
-    width: 264px;
+    width: 100%;
     height: 32px;
 }
 
@@ -389,6 +391,15 @@ body {
         margin: 0 6px;
         border-top: 4px solid transparent;
         width: 0;
+        border-radius: 4px;
+    }
+
+    .plan_information {
+        padding: 12px;
+    }
+
+    .plan_description {
+        margin: 0;
     }
 
     .plan:first-child {
@@ -417,6 +428,11 @@ body {
 
     .plan--ultra:hover {
         border-top-color: #ff5555;
+    }
+
+    .plan_button {
+        border-radius: 4px;
+        margin: 0 12px 12px;
     }
 
     .plan_button:hover {
@@ -509,6 +525,10 @@ body {
         color: #656d78;
         white-space: nowrap;
     }
+
+    .form_email, .form_send-btn {
+        width: 264px;
+    }
 }
 
 @media only screen and (min-width: 1280px) {
@@ -531,8 +551,9 @@ body {
         list-style: none;
     }
 
-    .site-navigation__menu--main:hover .drop-menu {
+    .site-navigation__menu--services:hover .drop-menu {
         display: block;
+        transition: 1s;
     }
 
     .drop-menu {
@@ -545,6 +566,7 @@ body {
         border-radius: 4px;
         padding-left: 0;
         text-align: left;
+        transition: 1s;
     }
 
     .drop-menu:after {
@@ -593,7 +615,7 @@ body {
         border-bottom: 2px solid transparent;
     }
 
-    .site-navigation__menu--item:hover {
+    .site-navigation__menu--item:hover, .menu--main__active {
         border-bottom: 2px solid #a0d468;
         color: #a0d468;
     }
@@ -624,6 +646,27 @@ body {
         text-transform: uppercase;
     }
 
+    input[type="search"] {
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+
+    .plan-advantages {
+        display: flex;
+        min-height: 120px;
+        justify-content: space-between;
+        flex-direction: column;
+        margin-top: 25px;
+    }
+
+    .plan_information {
+        padding-bottom: 0px;
+    }
+
+    .plan_button {
+        margin: 28px 20px 20px;
+    }
+
     .plan-advantages__li {
         font-size: 13px;
     }
@@ -633,16 +676,22 @@ body {
     }
 
     .preview_cover {
-        display: block;
-        margin: 0 10px;
         height: 170px;
-    }
-
-    .preview_cover--picture {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        background-color: #aab2bc;
         border-top-left-radius: 4px;
         border-top-right-radius: 4px;
-        width: 100%;
-        height: 100%;
+    }
+
+    .preview:nth-child(2) {
+        margin: 0;
+    }
+
+    .preview__block--center {
+        margin: 0 20px;
     }
 
     .avatar {
