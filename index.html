@@ -6,44 +6,47 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <header>
-    <div class="header__logo">
-        <a class="company-logo" href=""></a>
-        <div class="header__logo-title">
-            <a class="company-name" href="">МЭРРИ ПОПИНС</a>
-            <a href="" class="company-subname">Лучшие няни в мире</a>
+    <div class="header-wrap">
+        <a href="#" class="header__logo">
+            <div class="company-logo"></div>
+            <div class="header__logo-title">
+                <div class="company-name">мэрри попинс</div>
+                <div class="company-subname">Лучшие няни в мире</div>
+            </div>
+        </a>
+        <ul class="site-navigation__menu">
+            <li class="site-navigation__menu--main">
+                <a class="site-navigation__menu--item menu--main__active" href="#">Главная</a>
+            </li>
+            <li class="site-navigation__menu--services">
+                <a class="site-navigation__menu--item" href="#">Услуги</a>
+                <ul class="drop-menu">
+                    <li class="drop-menu__list drop-menu__list--toproundcorner"><a href="#" class="drop-menu__link">Cиделка
+                        на вечер</a></li>
+                    <li class="drop-menu__list"><a href="#" class="drop-menu__link">Сиделка на выходные</a></li>
+                    <li class="drop-menu__list drop-menu__list--btmroundcorner"><a href="#" class="drop-menu__link">Долгосрочный
+                        контракт</a></li>
+                </ul>
+            </li>
+            <li class="">
+                <a class="site-navigation__menu--item" href="#">Рекомендации</a>
+            </li>
+            <li class="">
+                <a class="site-navigation__menu--item" href="#">Контакты</a>
+            </li>
+        </ul>
+        <form class="search" action="#" method="get">
+            <input type="search" class="site__search" placeholder="введите запрос">
+        </form>
+        <div class="header__navigation">
+            <a href="" id="site__search" class="head_search"></a>
+            <a href="" class="head_menu"></a>
         </div>
-    </div>
-    <ul class="site-navigation__menu">
-        <li class="site-navigation__menu--main">
-            <a class="site-navigation__menu--item menu--main__active" href="#">Главная</a>
-        </li>
-        <li class="site-navigation__menu--services">
-            <a class="site-navigation__menu--item" href="#">Услуги</a>
-            <ul class="drop-menu">
-                <li class="drop-menu__list drop-menu__list--toproundcorner"><a href="#" class="drop-menu__link">Cиделка
-                    на вечер</a></li>
-                <li class="drop-menu__list"><a href="#" class="drop-menu__link">Сиделка на выходные</a></li>
-                <li class="drop-menu__list drop-menu__list--btmroundcorner"><a href="#" class="drop-menu__link">Долгосрочный
-                    контракт</a></li>
-            </ul>
-        </li>
-        <li class="">
-            <a class="site-navigation__menu--item" href="#">Рекомендации</a>
-        </li>
-        <li class="">
-            <a class="site-navigation__menu--item" href="#">Контакты</a>
-        </li>
-    </ul>
-    <form class="search" action="#" method="get">
-        <input type="search" class="site__search" placeholder="введите запрос">
-    </form>
-    <div class="header__navigation">
-        <a href="" id="site__search" class="head_search"></a>
-        <a href="" class="head_menu"></a>
     </div>
 </header>
 <div class="wrapper-content">
@@ -162,17 +165,15 @@
     </div>
 
     <div class="mail">
-        <div class="mail_content">
-            <div class="mailing">
-                <p class="mail_title">Подпишитесь на рассылку</p>
-                <p class="mail_description">Раз в месяц присылаем подборку лучших статей из нашего блога. Без спама
-                </p>
-            </div>
-            <form class="mailing_form" action="#">
-                <input class="form_email" type="email" value="" placeholder="Введите свою почту" required>
-                <button class="form_send-btn" type="submit">ПОДПИСАТЬСЯ</button>
-            </form>
+        <div class="mailing">
+            <p class="mail_title">Подпишитесь на рассылку</p>
+            <p class="mail_description">Раз в месяц присылаем подборку лучших статей из нашего блога. Без спама
+            </p>
         </div>
+        <form class="mailing_form" action="#">
+            <input class="form_email" type="email" value="" placeholder="Введите свою почту" required>
+            <button class="form_send-btn" type="submit">ПОДПИСАТЬСЯ</button>
+        </form>
     </div>
 </div>
 <div class="footer">
