@@ -301,21 +301,34 @@ header {
     border: solid 1px rgba(254, 158, 144, 0.25);
     position: relative;
     z-index: 10;
-    margin-top: 28px;
-    margin-bottom: 44px;
-    box-shadow: 0px 2px 0 0 rgba(1, 1, 1, 0.06);
+    margin: 28px 8px 44px;
+    box-shadow: 0 2px 0 0 rgba(1, 1, 1, 0.06);
+
 }
 
 .mail:before {
     content: "";
     position: absolute;
-    z-index: -1;
+    z-index: -10;
     background: repeating-linear-gradient(#fe9e90, white, #92cdff);
-    display: flex;
     border-radius: 4px;
     border: solid 1px rgba(254, 158, 144, 0.25);
     top: -4px;
     left: -4px;
+    width: 101%;
+    height: 103%;
+}
+
+.mail:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: white;
+    border-radius: 4px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .mail_title {
@@ -532,8 +545,13 @@ header {
     }
 
     .mail:before {
+        width: 686px;
+        height: 122px;
+    }
+
+    .mail:after {
         width: 680px;
-        height: 124px;
+        height: 116px;
     }
 
     .mailing {
